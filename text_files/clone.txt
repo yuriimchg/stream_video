@@ -1,0 +1,4 @@
+Тестовий файл для поширювання.
+This is test file to share.
+Das ist ein Testdatei zu teilen.
+To jest plik testowy do udostępnienia

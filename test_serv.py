@@ -3,7 +3,7 @@ from random import randint
 from datetime import datetime
 
 # If host is an empty string, then this PC would be a host.
-host = ''
+host = '0.0.0.0'
 port = 5678
 
 # AF_INET and SOCK_STREAM are constants, telling the system which protocols to use
@@ -45,7 +45,7 @@ while True:
         print(f'Received {i}, converted it into {sq_i}')
         # Send encoded data to the client
         conn.send(data)
-        print(f'sent data #{i} to client')
+        print(f'sent data #{i} to client.')
 
     if not data and (datetime.now() - chkpt).seconds ==5:
         s.listen(1)
