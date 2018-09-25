@@ -1,43 +1,44 @@
 import socket
+from random import randint
 
-# If host is an empty string, then host is this PC.
+# If host is an empty string, then this PC would be a host.
 host = ''
-port = 50001
+port = 5678
 
 # AF_INET and SOCK_STREAM are constants, telling the system which protocols to use
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# Associate the connection with the specific port. Just connect this host to this port
+# Associate the connection with the specific port.
+# Simply connect this host to that port
 s.bind((host,port))
 # Start the server process, this programm accepting connections when asked
 s.listen()
 
-print(f'listening on port {port}')
+print(f'listening on port {port}. Waiting for connection')
 # conn represents the connection and is used to send and receive data
 conn, addr = s.accept()
-
 print(f'Connected to {addr}')
+
 # First query
 data = conn.recv(1024)
 print(f'server received such data: {data}')
-# First answer
-conn.send(b'Hey, you, I am the host')
 
+# First answer
+conn.send(b'What?')
+
+# Make server wait for client requests
 while True:
-    # Second query
+    # Receive query
     data = conn.recv(1024)
     # Read the incoming data
     if data:
+        # decode bytes
         i = data.decode('utf-8')
-        # Convert it to integer
-        print("Received ", i, 'yes')
-
         # Work with data
-        # Square it and convert to bytes
-        sq_i = str(int(i) ** 2)
+        sq_i = str(int(i) ** randint(1,6))
+        # Encode data
         data = bytes(str(sq_i), 'utf-8')
-        print(f'converted {i} into {sq_i}')
-        # Send to the client
-        # Second answer
+        print(f'Received {i}, converted it into {sq_i}')
+        # Send encoded data to the client
         conn.send(data)
-        print(f'sent data #{i}')
+        print(f'sent data #{i}' to client)
 conn.close()
