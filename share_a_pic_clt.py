@@ -4,9 +4,9 @@ import cv2
 
 # file to share
 #file_to_share = 'other_files/bill_murray1.jpg'
-file_to_share = '/home/yurii/Desktop/person1709_1009_23.avi'
+file_to_share = '/home/yurii/Desktop/person1709_1010_18.avi'
 # host and port
-host = '127.0.0.1'
+host = '10.1.0.95'
 port = 5002
 # create client socket
 cli_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -33,8 +33,8 @@ while True:
         break
     cli_socket.send(batch)
 f.close()
-
 print(f'[INFO]: Sent file to server, waiting for response')
+
 # Get response from server
 data = cli_socket.recv(1024)
 print(f'[MSG]:{data.decode("utf-8")}')

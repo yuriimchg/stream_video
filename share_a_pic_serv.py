@@ -5,7 +5,7 @@ import os
 
 # file to write
 #file_to_write = 'other_files/billy.jpg'
-file_to_write = '/home/yurii/Desktop/person1709_1009_23_received.avi'
+file_to_write = '/home/yurii/Desktop/gh.avi'
 # define host, port
 link = ('',5002)
 # create server socket
@@ -39,11 +39,9 @@ counter = 0
 # Count time
 time_checkpoint = datetime.now()
 # Receive the image
-while (counter < int(img_size) and (datetime.now() - time_checkpoint).seconds < 5):
+while (counter < int(img_size) and (datetime.now() - time_checkpoint).seconds < img_size/10000):
     # Receive the data from client
     batch = conn.recv(512)
-    # Count time
-    time_checkpoint = datetime.now()
     # Save received data to file
     f.write(batch)
     # Update counter
