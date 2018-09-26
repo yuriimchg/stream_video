@@ -25,7 +25,6 @@ print(f'[CLIENT]: {test_data.decode("utf-8")}')
 conn.send(b'1')
 # Create a file to write
 f = open(file_to_write,'wb')
-
 # Receive the data from client
 data = conn.recv(1024)
 # Check if received data is not None
