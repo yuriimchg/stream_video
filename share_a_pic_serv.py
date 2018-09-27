@@ -4,8 +4,7 @@ import cv2
 import os
 
 # file to write
-#file_to_write = 'other_files/billy.jpg'
-file_to_write = '/home/yurii/Desktop/gh.avi'
+file_to_write = 'other_files/billy.jpg'
 # define host, port
 link = ('',5002)
 # create server socket
