@@ -3,10 +3,9 @@ import os
 import cv2
 
 # file to share
-#file_to_share = 'other_files/bill_murray1.jpg'
-file_to_share = '/home/yurii/Desktop/person1709_1010_18.avi'
+file_to_share = 'other_files/bill_murray1.jpg'
 # host and port
-host = '10.1.0.95'
+host = '127.0.0.1'
 port = 5002
 # create client socket
 cli_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -16,12 +15,11 @@ print(f'[INFO]: Connected to the host {host}')
 # Confirm connection to the server
 cli_socket.send(b'Hi, server! I\'ve got something for you!')
 # Get response from server
-cli_socket.recv(1024)
-
+print(f'[MSG]:{cli_socket.recv(1024).decode("utf-8")}')
 # get size of the image
 img_size = os.path.getsize(file_to_share)
-img_size = bytes(str(img_size), 'utf-8')
-# Send length of the image to server
+img_size = bytes(str(img_size), "utf-8")
+# Send size of the image to server
 cli_socket.send(img_size)
 # Receive response from server
 cli_socket.recv(1024)
