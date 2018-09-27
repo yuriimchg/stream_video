@@ -29,7 +29,10 @@ print(f'[MSG]: {second_response}')
 
 # capture the video
 cap = cv2.VideoCapture(file_to_share)
+# Read the frames from videofile/webcam
 while True:
     ret,frame = cap.read()
-    data = pickle.dumps(frame) ### new code
-    clientsocket.sendall(struct.pack("L", len(data))+data) ### new code
+    # convert data to the bytearray
+    data = pickle.dumps(frame)
+    # Send to the server
+    clientsocket.sendall(struct.pack("L", len(data))+data)
