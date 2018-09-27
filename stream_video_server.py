@@ -39,7 +39,7 @@ while True:
     while len(data) <  video_size:
         # Update bytearray with video streaming from client
         data += conn.recv(4096)
-    #
+    # Split the bytearray
     packed_msg_size = data[:video_size]
     data = data[video_size:]
     # Get the size of a single frame

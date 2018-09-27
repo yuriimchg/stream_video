@@ -8,7 +8,7 @@ import cv2
 # Select video file to stream via socket
 file_to_share = 0 #'/home/yurii/Desktop/motorhead_heroes.mp4'
 # Initialize host and port
-host = '10.1.0.176'
+host = '10.1.0.95'
 port = 8089
 
 # Define client socket connection
