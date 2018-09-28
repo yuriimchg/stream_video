@@ -7,7 +7,7 @@ import cv2
 
 
 # Select video file to stream via socket
-file_to_share = '/home/yurii/Desktop/motorhead_heroes.mp4'
+file_to_share = '/home/yurii/Desktop/filthy.mp4'
 # Initialize host and port
 host = '10.1.0.95'
 port = 8089
@@ -36,4 +36,4 @@ while True:
     # convert data to the bytearray
     data = pickle.dumps(frame)
     # Send to the server
-    clientsocket.sendall(struct.pack("L", len(data))+data)
+    clientsocket.send(struct.pack("L", len(data))+data)

@@ -36,7 +36,7 @@ conn.send(bytes(f'Server is ready to stream video of size {video_size}', 'utf-8'
 # Start receiving video streaming
 while True:
     # Receive data until size of the received data is equal to the size of the video
-    while len(data) <  video_size:
+    while len(data) < video_size:
         # Update bytearray with video streaming from client
         data += conn.recv(4096)
     # Split the bytearray
@@ -51,7 +51,7 @@ while True:
     data = data[msg_size:]
 
     # Convert the frame from bytes type
-    frame=pickle.loads(frame_data)
+    frame = pickle.loads(frame_data)
     # Show the frame of the video from client
     cv2.imshow('frame',frame)
     cv2.waitKey(1)
