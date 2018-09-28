@@ -7,19 +7,16 @@ import struct
 
 # Define host and port
 host=''
-port=8089
+port=5003
 # Define socket
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-print ('Socket created')
 # Connect host to the port
 s.bind((host,port))
-print('Socket bind complete')
 # Make server listen on port {port_id}
 s.listen(1)
-print('Socket now listening')
+print(f'[INFO]: Server is listening on port {port}.')
 # Wait until client is connected
 conn,addr=s.accept()
-
 # Get message from the
 first_msg = conn.recv(1024).decode('utf-8')
 print(f'[INFO]: New connection from {first_msg}')
@@ -30,6 +27,7 @@ video_size = int(conn.recv(1024).decode('utf-8'))
 video_size = struct.calcsize("L")
 # Initialize empty bytearray. It will be filled with the bytes of video streaming
 data = b""
+print(f'[INFO]: Ready to stream video from client')
 # Send a response to the client
 conn.send(bytes(f'Server is ready to stream video of size {video_size}', 'utf-8'))
 

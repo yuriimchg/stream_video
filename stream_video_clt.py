@@ -9,8 +9,8 @@ import cv2
 # Select video file to stream via socket
 file_to_share = '/home/yurii/Desktop/filthy.mp4'
 # Initialize host and port
-host = '10.1.0.95'
-port = 8089
+host = '127.0.0.1'
+port = 5003
 
 # Define client socket connection
 clientsocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
