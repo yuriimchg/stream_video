@@ -1,4 +1,4 @@
-# This app should stream video from the host to the server.
-# In the nearest future.
+# This app streams video from the client to the server.
+# Better description will be available in the nearest future.
 
 
