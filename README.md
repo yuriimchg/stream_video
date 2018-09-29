@@ -4,11 +4,9 @@
 # Usage
    1. Firstly clone the repository to both server and client computers within one network.
    
-   
-    ``` git clone https://github.com/yuriimchg/stream_video ```
+     git clone https://github.com/yuriimchg/stream_video 
     
-    
-    ``` cd stream_video ```
+     cd stream_video 
     
     
     
