@@ -2,9 +2,16 @@
 > Tested on Ubuntu 16.04 LTS and Python 3.6.6
 
 # Usage
-   1. Firstly clone the repository to both server and client computers within one network. 
+   1. Firstly clone the repository to both server and client computers within one network.
+   
+   
     ``` git clone https://github.com/yuriimchg/stream_video ```
+    
+    
     ``` cd stream_video ```
+    
+    
+    
 The scripts of the repository can run on a single machine, in this case the second step should be omitted.
 
 Data type| Client | Server
