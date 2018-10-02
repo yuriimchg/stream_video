@@ -12,12 +12,12 @@
     
 The scripts of the repository can run on a single machine, in this case the second step should be omitted.
 
-Data type| Client | Server
----------|--------|---------
- _Text data_ | Send | Receive 
-_Text files_ | Send | Receive 
-_Image files_ | Send | Receive
-_Video Streaming_ | Share | Broadcast
+   Data type| Client | Server
+   ---------|--------|---------
+   _Text data_ | Send | Receive 
+   _Text files_ | Send | Receive 
+   _Image files_ | Send | Receive
+   _Video Streaming_ | Share | Broadcast
 
    2. Then instead of `host = '127.0.0.1'` in the files _test_cli.py_, _send_file_cli_.py, _share_a_pic_clt.py_ and _stream_video_clt.py_ on client PC write down the IP address of server. The default host is _localhost_ and it is for the case, when one computer has both server and client roles.
    
