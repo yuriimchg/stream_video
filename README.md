@@ -25,7 +25,7 @@ The scripts of the repository can run on a single machine, in this case the seco
    
    4. Run `pip3 install numpy opencv-contrib-python` on both computers.
    
-   5. Run the **server** with command `python3 *[script_name]*_serv.py`. On receiving the message that server is listening on port, run the **client** with command `python3 *[script_name]*_clt.py` 
+   5. Run the **server** with command `python3 [script_name]_serv.py`. On receiving the message that server is listening on port, run the **client** with command `python3 [script_name]_clt.py` 
 
 
 
