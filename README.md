@@ -1,4 +1,4 @@
-> Python 3.6 or higher is required to run this repository, because files include f-strings, that appeared only in version 3.6.
+> Python 3.6 or higher is required to run this repository, because it uses _f-strings_, a great formatting tool, that appeared only in version 3.6.
 > Tested on Ubuntu 16.04 LTS and Python 3.6.6
 
 # Usage
